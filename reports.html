@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VEXORIUM | Reports</title>
+
+
+<!-- Bootstrap -->
+<link 
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+rel="stylesheet">
+
+
+<!-- Font Awesome -->
+<link 
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+<!-- Google Font -->
+<link 
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" 
+rel="stylesheet">
+
+
+<!-- Main CSS -->
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+
+
+<!-- ================= SIDEBAR ================= -->
+
+
+<aside class="sidebar">
+
+
+<div class="brand">
+
+
+<div class="brand-icon">
+
+<i class="fa-solid fa-bolt"></i>
+
+</div>
+
+
+<h2>
+VEXORIUM
+</h2>
+
+
+</div>
+
+
+
+
+<ul class="menu">
+
+
+<li>
+
+<a href="index.html">
+
+<i class="fa-solid fa-house"></i>
+
+<span>
+Dashboard
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="analytics.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<span>
+Analytics
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="revenue.html">
+
+<i class="fa-solid fa-wallet"></i>
+
+<span>
+Revenue
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="products.html">
+
+<i class="fa-solid fa-box-open"></i>
+
+<span>
+Products
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li>
+
+<a href="customers.html">
+
+<i class="fa-solid fa-users"></i>
+
+<span>
+Customers
+</span>
+
+</a>
+
+</li>
+
+
+
+
+
+<li class="active">
+
+<a href="reports.html">
+
+<i class="fa-solid fa-chart-column"></i>
+
+<span>
+Reports
+</span>
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+
+
+
+
+<div class="sidebar-bottom">
+
+
+<div class="upgrade-box">
+
+
+<h5>
+Upgrade Plan
+</h5>
+
+
+<p>
+Get advanced analytics & reports
+</p>
+
+
+<button>
+Upgrade
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</aside>
+
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+
+<main class="main-content">
+
+
+
+
+
+
+<!-- ================= TOPBAR ================= -->
+
+
+<header class="topbar">
+
+    <button class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+<div class="search-container">
+
+
+<i class="fa-solid fa-search"></i>
+
+
+<input 
+type="text"
+id="reportSearch"
+placeholder="Search reports..."
+>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="actions">
+
+
+
+
+
+<!-- Notification -->
+
+
+<div class="notification">
+
+
+
+<button id="notificationBtn">
+
+
+<i class="fa-solid fa-bell"></i>
+
+
+<span>
+3
+</span>
+
+
+</button>
+
+
+
+
+
+<div 
+class="notification-dropdown"
+id="notificationDropdown">
+
+
+
+<h4>
+Notifications
+</h4>
+
+
+
+<div class="notify-item">
+
+<i class="fa-solid fa-file"></i>
+
+New report generated
+
+</div>
+
+
+
+<div class="notify-item">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Analytics updated
+
+</div>
+
+
+
+<div class="notify-item">
+
+<i class="fa-solid fa-dollar-sign"></i>
+
+Revenue report ready
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- PROFILE -->
+
+
+<div class="profile">
+
+
+
+<img 
+src="https://i.pravatar.cc/150?img=12"
+alt="Profile"
+>
+
+
+
+
+<div>
+
+
+<h6>
+Maham Rao
+</h6>
+
+
+<small>
+Administrator
+</small>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="profile-dropdown">
+
+
+
+    <a href="profile.html">
+
+        <i class="fa-solid fa-user"></i>
+        
+        My Profile
+        
+        </a>
+
+
+
+
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</a>
+
+
+
+
+
+<a href="#">
+
+<i class="fa-solid fa-right-from-bracket"></i>
+
+Logout
+
+</a>
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+</header>
+
+
+
+
+
+<!-- REPORTS CONTENT STARTS PART 2 -->
+
+<!-- ================= REPORTS SECTION ================= -->
+
+
+<section class="reports-page">
+
+
+
+
+
+    <!-- PAGE HEADER -->
+    
+    
+    <div class="heading">
+    
+    
+    <div>
+    
+    
+    <h1>
+    Reports
+    </h1>
+    
+    
+    <p>
+    Generate, manage and export business reports.
+    </p>
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    <button 
+    class="primary-btn"
+    id="generateReport">
+    
+    
+    <i class="fa-solid fa-plus"></i>
+    
+    Generate Report
+    
+    
+    </button>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- ================= REPORT STATS ================= -->
+    
+    
+    <div class="stats-grid">
+    
+    
+    
+    
+    
+    <!-- TOTAL REPORTS -->
+    
+    
+    <div class="stat-card">
+    
+    
+    <div class="icon green">
+    
+    
+    <i class="fa-solid fa-file-lines"></i>
+    
+    
+    </div>
+    
+    
+    
+    <div>
+    
+    
+    <h2 id="totalReports">
+    24
+    </h2>
+    
+    
+    <p>
+    Total Reports
+    </p>
+    
+    
+    <span>
+    Available Reports
+    </span>
+    
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- REVENUE REPORTS -->
+    
+    
+    <div class="stat-card">
+    
+    
+    <div class="icon purple">
+    
+    
+    <i class="fa-solid fa-dollar-sign"></i>
+    
+    
+    </div>
+    
+    
+    
+    <div>
+    
+    
+    <h2>
+    8
+    </h2>
+    
+    
+    <p>
+    Revenue Reports
+    </p>
+    
+    
+    <span>
+    Monthly Reports
+    </span>
+    
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- SALES REPORTS -->
+    
+    
+    <div class="stat-card">
+    
+    
+    <div class="icon blue">
+    
+    
+    <i class="fa-solid fa-chart-line"></i>
+    
+    
+    </div>
+    
+    
+    
+    <div>
+    
+    
+    <h2>
+    10
+    </h2>
+    
+    
+    <p>
+    Sales Reports
+    </p>
+    
+    
+    <span>
+    Updated Today
+    </span>
+    
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- DOWNLOADS -->
+    
+    
+    <div class="stat-card">
+    
+    
+    <div class="icon orange">
+    
+    
+    <i class="fa-solid fa-download"></i>
+    
+    
+    </div>
+    
+    
+    
+    <div>
+    
+    
+    <h2>
+    187
+    </h2>
+    
+    
+    <p>
+    Downloads
+    </p>
+    
+    
+    <span>
+    This Month
+    </span>
+    
+    
+    </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    </div>
+    <!-- ================= REPORT TABLE ================= -->
+
+
+<div class="panel large reports-table-panel">
+
+
+    <div class="panel-head">
+    
+    
+    <h3>
+    Business Reports
+    </h3>
+    
+    
+    
+    
+    
+    <select id="reportFilter">
+    
+    
+    <option value="all">
+    All Reports
+    </option>
+    
+    
+    <option value="Revenue">
+    Revenue
+    </option>
+    
+    
+    <option value="Sales">
+    Sales
+    </option>
+    
+    
+    <option value="Customers">
+    Customers
+    </option>
+    
+    
+    <option value="Inventory">
+    Inventory
+    </option>
+    
+    
+    </select>
+    
+    
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    <div class="table-wrapper">
+    
+    
+    <table class="reports-table">
+    
+    
+    <thead>
+    
+    
+    <tr>
+    
+    
+    <th>
+    #
+    </th>
+    
+    
+    <th>
+    Report Name
+    </th>
+    
+    
+    <th>
+    Category
+    </th>
+    
+    
+    <th>
+    Date
+    </th>
+    
+    
+    <th>
+    Status
+    </th>
+    
+    
+    <th>
+    Actions
+    </th>
+    
+    
+    </tr>
+    
+    
+    </thead>
+    
+    
+    
+    
+    
+    
+    
+    <tbody id="reportTable">
+    
+    
+    
+    
+    
+    <tr>
+    
+    
+    <td>
+    1
+    </td>
+    
+    
+    <td>
+    Monthly Revenue Report
+    </td>
+    
+    
+    <td>
+    Revenue
+    </td>
+    
+    
+    <td>
+    18 Jul 2026
+    </td>
+    
+    
+    <td>
+    
+    <span class="status-complete">
+    Completed
+    </span>
+    
+    </td>
+    
+    
+    
+    <td class="report-actions">
+    
+    
+    
+    <button class="report-view-btn">
+    
+    <i class="fa-solid fa-eye"></i>
+    
+    </button>
+    
+    
+    
+    
+    
+    <button class="report-download-btn">
+    
+    <i class="fa-solid fa-download"></i>
+    
+    </button>
+    
+    
+    
+    
+    
+    <button class="report-delete-btn">
+    
+    <i class="fa-solid fa-trash"></i>
+    
+    </button>
+    
+    
+    
+    </td>
+    
+    
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+    
+    
+    <td>
+    2
+    </td>
+    
+    
+    <td>
+    Weekly Sales Report
+    </td>
+    
+    
+    <td>
+    Sales
+    </td>
+    
+    
+    <td>
+    17 Jul 2026
+    </td>
+    
+    
+    <td>
+    
+    <span class="status-pending">
+    Pending
+    </span>
+    
+    </td>
+    
+    
+    
+    <td class="report-actions">
+    
+    
+    
+    <button class="report-view-btn">
+    
+    <i class="fa-solid fa-eye"></i>
+    
+    </button>
+    
+    
+    
+    
+    
+    <button class="report-download-btn">
+    
+    <i class="fa-solid fa-download"></i>
+    
+    </button>
+    
+    
+    
+    
+    
+    <button class="report-delete-btn">
+    
+    <i class="fa-solid fa-trash"></i>
+    
+    </button>
+    
+    
+    
+    </td>
+    
+    
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+    
+    
+    <td>
+    3
+    </td>
+    
+    
+    <td>
+    Customer Activity Report
+    </td>
+    
+    
+    <td>
+    Customers
+    </td>
+    
+    
+    <td>
+    16 Jul 2026
+    </td>
+    
+    
+    <td>
+    
+    <span class="status-complete">
+    Completed
+    </span>
+    
+    </td>
+    
+    
+    
+    <td class="report-actions">
+    
+    
+    
+    <button class="report-view-btn">
+    
+    <i class="fa-solid fa-eye"></i>
+    
+    </button>
+    
+    
+    
+    
+    
+    <button class="report-download-btn">
+    
+    <i class="fa-solid fa-download"></i>
+    
+    </button>
+    
+    
+    
+    
+    
+    <button class="report-delete-btn">
+    
+    <i class="fa-solid fa-trash"></i>
+    
+    </button>
+    
+    
+    
+    </td>
+    
+    
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    
+    <tr>
+    
+    
+    <td>
+    4
+    </td>
+    
+    
+    <td>
+    Inventory Stock Report
+    </td>
+    
+    
+    <td>
+    Inventory
+    </td>
+    
+    
+    <td>
+    15 Jul 2026
+    </td>
+    
+    
+    <td>
+    
+    <span class="status-complete">
+    Completed
+    </span>
+    
+    </td>
+    
+    
+    
+    <td class="report-actions">
+    
+    
+    
+    <button class="report-view-btn">
+    
+    <i class="fa-solid fa-eye"></i>
+    
+    </button>
+    
+    
+    
+    
+    
+    <button class="report-download-btn">
+    
+    <i class="fa-solid fa-download"></i>
+    
+    </button>
+    
+    
+    
+    
+    
+    <button class="report-delete-btn">
+    
+    <i class="fa-solid fa-trash"></i>
+    
+    </button>
+    
+    
+    
+    </td>
+    
+    
+    </tr>
+    
+    
+    
+    
+    
+    
+    
+    </tbody>
+    
+    
+    </table>
+    
+    
+    </div>
+    
+    
+    </div>
+    <!-- ================= GENERATE REPORT MODAL ================= -->
+
+
+<div 
+class="modal fade"
+id="generateReportModal">
+
+
+<div class="modal-dialog">
+
+
+<div class="modal-content">
+
+
+
+<div class="modal-header">
+
+
+<h5 class="modal-title">
+
+Generate New Report
+
+</h5>
+
+
+<button 
+class="btn-close"
+data-bs-dismiss="modal">
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="modal-body">
+
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Report Name
+
+</label>
+
+
+<input 
+type="text"
+id="newReportName"
+class="form-control"
+placeholder="Enter report name">
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Category
+
+</label>
+
+
+
+<select 
+id="newReportCategory"
+class="form-select">
+
+
+<option value="Revenue">
+
+Revenue
+
+</option>
+
+
+<option value="Sales">
+
+Sales
+
+</option>
+
+
+<option value="Customers">
+
+Customers
+
+</option>
+
+
+<option value="Inventory">
+
+Inventory
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Date
+
+</label>
+
+
+<input 
+type="date"
+id="newReportDate"
+class="form-control">
+
+
+</div>
+
+
+
+
+
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+
+Status
+
+</label>
+
+
+<select 
+id="newReportStatus"
+class="form-select">
+
+
+<option value="Completed">
+
+Completed
+
+</option>
+
+
+<option value="Pending">
+
+Pending
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="modal-footer">
+
+
+<button 
+class="btn btn-secondary"
+data-bs-dismiss="modal">
+
+Cancel
+
+</button>
+
+
+
+
+<button 
+class="primary-btn"
+id="createReportBtn">
+
+
+<i class="fa-solid fa-file-circle-plus"></i>
+
+Create Report
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+<!-- ================= REPORT PREVIEW MODAL ================= -->
+
+
+<div 
+class="modal fade"
+id="reportPreviewModal">
+
+
+
+<div class="modal-dialog modal-lg">
+
+
+
+<div class="modal-content">
+
+
+
+
+
+<div class="modal-header">
+
+
+<h5 class="modal-title">
+
+Report Preview
+
+</h5>
+
+
+
+<button 
+class="btn-close"
+data-bs-dismiss="modal">
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="modal-body">
+
+
+
+<h4 id="previewReportTitle">
+
+Monthly Revenue Report
+
+</h4>
+
+
+
+
+<p>
+
+Detailed business analytics including revenue,
+sales performance, customer growth and inventory summary.
+
+</p>
+
+
+
+
+
+
+
+<div class="stats-grid">
+
+
+
+
+
+<div class="stat-card">
+
+
+<div class="icon green">
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+
+<div>
+
+<h2>
++18%
+</h2>
+
+<p>
+Revenue Growth
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="stat-card">
+
+
+<div class="icon blue">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+</div>
+
+
+<div>
+
+<h2>
++12%
+</h2>
+
+<p>
+Sales Growth
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="stat-card">
+
+
+<div class="icon purple">
+
+<i class="fa-solid fa-users"></i>
+
+</div>
+
+
+<div>
+
+<h2>
+245
+</h2>
+
+<p>
+New Customers
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="modal-footer">
+
+
+
+<button 
+class="primary-btn report-download-modal">
+
+<i class="fa-solid fa-download"></i>
+
+Download PDF
+
+</button>
+
+
+
+
+
+
+<button 
+class="btn btn-secondary"
+data-bs-dismiss="modal">
+
+Close
+
+</button>
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Bootstrap JS -->
+
+<script 
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+
+
+<!-- Reports JS -->
+
+<script src="reports.js"></script>
+
+<script src="script.js"></script>
+
+
+
+</main>
+
+
+</body>
+
+</html>

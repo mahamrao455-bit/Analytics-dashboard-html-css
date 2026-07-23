@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VEXORIUM | Revenue Dashboard</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="revenue-page">
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+<div class="brand">
+
+<div class="brand-icon">
+<i class="fa-solid fa-bolt"></i>
+</div>
+
+<h2>VEXORIUM</h2>
+
+</div>
+
+<ul class="menu">
+
+<li>
+<a href="index.html">
+<i class="fa-solid fa-house"></i>
+Dashboard
+</a>
+</li>
+
+<li>
+<a href="analytics.html">
+<i class="fa-solid fa-chart-line"></i>
+Analytics
+</a>
+</li>
+
+<li class="active">
+<a href="revenue.html">
+<i class="fa-solid fa-wallet"></i>
+Revenue
+</a>
+</li>
+
+<li>
+<a href="products.html">
+<i class="fa-solid fa-box-open"></i>
+Products
+</a>
+</li>
+
+<li>
+<a href="customers.html">
+<i class="fa-solid fa-users"></i>
+Customers
+</a>
+</li>
+
+<li>
+<a href="reports.html">
+<i class="fa-solid fa-chart-column"></i>
+Reports
+</a>
+</li>
+
+
+</ul>
+
+<div class="sidebar-bottom">
+
+<div class="upgrade-box">
+
+<h5>Upgrade Plan</h5>
+
+<p>Unlock Premium Revenue Reports</p>
+
+<button>Upgrade</button>
+
+</div>
+
+</div>
+
+</aside>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ================= MAIN ================= -->
+
+<main class="main-content">
+
+<!-- ================= TOPBAR ================= -->
+
+<header class="topbar">
+
+
+    <button class="menu-toggle" id="menuToggle">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+<div class="search-container">
+
+<i class="fa-solid fa-search"></i>
+
+<input
+type="text"
+id="searchRevenue"
+placeholder="Search revenue records...">
+
+</div>
+
+<div class="actions">
+
+<!-- Notification -->
+
+<div class="notification">
+
+<button id="notificationBtn">
+
+<i class="fa-solid fa-bell"></i>
+
+<span>3</span>
+
+</button>
+
+<div class="notification-dropdown" id="notificationDropdown">
+
+<h4>Notifications</h4>
+
+<div class="notify-item">
+<i class="fa-solid fa-arrow-trend-up"></i>
+Revenue increased by 18%
+</div>
+
+<div class="notify-item">
+<i class="fa-solid fa-file-invoice-dollar"></i>
+New payment received
+</div>
+
+<div class="notify-item">
+<i class="fa-solid fa-chart-column"></i>
+Weekly report generated
+</div>
+
+</div>
+
+</div>
+
+<!-- Profile -->
+
+<div class="profile">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+<div>
+
+<h6>Maham Rao</h6>
+
+<small>Administrator</small>
+
+</div>
+
+<div class="profile-dropdown">
+
+    <a href="profile.html">
+
+        <i class="fa-solid fa-user"></i>
+        
+        My Profile
+        
+        </a>
+<a href="settings.html">
+<i class="fa-solid fa-gear"></i>
+Settings
+</a>
+
+<a href="#">
+<i class="fa-solid fa-right-from-bracket"></i>
+Logout
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="dashboard">
+
+<div class="heading">
+
+<div>
+
+<h1>Revenue Dashboard 💰</h1>
+
+<p>Track your income, payments and business growth.</p>
+
+</div>
+
+<div>
+
+    <button class="primary-btn" id="addRevenueBtn">
+
+        <i class="fa-solid fa-plus"></i>
+        
+        Add Revenue
+        
+        </button>
+
+</div>
+
+</div>
+
+<!-- ================= SUMMARY CARDS ================= -->
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<div class="icon green">
+
+<i class="fa-solid fa-dollar-sign"></i>
+
+</div>
+
+<div>
+
+<h2 id="totalRevenue">
+$248,950
+</h2>
+
+<p>Total Revenue</p>
+
+<span>+18.5%</span>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="icon blue">
+
+<i class="fa-solid fa-credit-card"></i>
+
+</div>
+
+<div>
+
+<h2 id="monthlyRevenue">
+$38,420
+</h2>
+
+<p>This Month</p>
+
+<span>+12.8%</span>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="icon orange">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+</div>
+
+<div>
+
+<h2 id="pendingPayments">
+$7,350
+</h2>
+
+<p>Pending Payments</p>
+
+<span>15 Invoices</span>
+
+</div>
+
+</div>
+
+<div class="stat-card">
+
+<div class="icon purple">
+
+<i class="fa-solid fa-chart-line"></i>
+
+</div>
+
+<div>
+
+<h2 id="growthRate">
+24.8%
+</h2>
+
+<p>Growth Rate</p>
+
+<span>Excellent</span>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= REVENUE CHART ================= -->
+
+<div class="dashboard-row">
+
+<div class="panel large">
+
+<div class="panel-head">
+
+<h3>Revenue Analytics</h3>
+
+<select id="chartFilter">
+
+<option>Monthly</option>
+
+<option>Weekly</option>
+
+<option>Yearly</option>
+
+</select>
+
+</div>
+
+<canvas id="revenueChart"></canvas>
+
+</div>
+
+<div class="panel">
+
+<h3>Revenue Goal</h3>
+
+<canvas id="goalChart"></canvas>
+
+</div>
+
+</div>
+<!-- ================= REVENUE TABLE ================= -->
+
+<div class="dashboard-row">
+
+    <div class="panel large revenue-table-panel">
+    
+    <div class="panel-head">
+    
+    <h3>Revenue Records</h3>
+    
+    <button class="primary-btn" id="downloadReport">
+    <i class="fa-solid fa-download"></i>
+    Download Report
+    </button>
+    
+    </div>
+    
+    <div class="table-responsive">
+    
+    <table class="table align-middle table-dark table-hover">
+    
+    <thead>
+    
+    <tr>
+    
+    <th>ID</th>
+    <th>Client</th>
+    <th>Category</th>
+    <th>Date</th>
+    <th>Amount</th>
+    <th>Status</th>
+    <th>Actions</th>
+    
+    </tr>
+    
+    </thead>
+    
+    <tbody id="revenueTableBody">
+    
+    <!-- JS Will Generate Data -->
+    
+    </tbody>
+    
+    </table>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    </main>
+    
+    <!-- ================= ADD REVENUE MODAL ================= -->
+    
+    <div class="modal fade" id="addRevenueModal" tabindex="-1">
+    
+    <div class="modal-dialog">
+    
+    <div class="modal-content bg-dark text-light">
+    
+    <div class="modal-header">
+    
+    <h5>Add Revenue</h5>
+    
+    <button class="btn-close btn-close-white"
+    data-bs-dismiss="modal"></button>
+    
+    </div>
+    
+    <div class="modal-body">
+    
+    <input
+    type="text"
+    class="form-control mb-3"
+    id="clientName"
+    placeholder="Client Name">
+    
+    <input
+    type="text"
+    class="form-control mb-3"
+    id="category"
+    placeholder="Category">
+    
+    <input
+    type="date"
+    class="form-control mb-3"
+    id="date">
+    
+    <input
+    type="number"
+    class="form-control mb-3"
+    id="amount"
+    placeholder="Amount">
+    
+    <select
+    class="form-select"
+    id="status">
+    
+    <option>Completed</option>
+    <option>Pending</option>
+    
+    </select>
+    
+    </div>
+    
+    <div class="modal-footer">
+    
+    <button
+    class="btn btn-secondary"
+    data-bs-dismiss="modal">
+    
+    Cancel
+    
+    </button>
+    
+    <button
+    class="btn btn-success"
+    id="saveRevenue">
+    
+    Save Revenue
+    
+    </button>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!-- ================= VIEW MODAL ================= -->
+    
+    <div class="modal fade" id="viewModal" tabindex="-1">
+    
+    <div class="modal-dialog">
+    
+    <div class="modal-content bg-dark text-light">
+    
+    <div class="modal-header">
+    
+    <h5>Revenue Details</h5>
+    
+    <button
+    class="btn-close btn-close-white"
+    data-bs-dismiss="modal">
+    
+    </button>
+    
+    </div>
+    
+    <div class="modal-body" id="viewContent">
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!-- ================= EDIT MODAL ================= -->
+    
+    <div class="modal fade" id="editModal" tabindex="-1">
+    
+    <div class="modal-dialog">
+    
+    <div class="modal-content bg-dark text-light">
+    
+    <div class="modal-header">
+    
+    <h5>Edit Revenue</h5>
+    
+    <button
+    class="btn-close btn-close-white"
+    data-bs-dismiss="modal">
+    
+    </button>
+    
+    </div>
+    
+    <div class="modal-body">
+    
+    <input
+    type="hidden"
+    id="editId">
+    
+    <input
+    type="text"
+    class="form-control mb-3"
+    id="editClient">
+    
+    <input
+    type="text"
+    class="form-control mb-3"
+    id="editCategory">
+    
+    <input
+    type="date"
+    class="form-control mb-3"
+    id="editDate">
+    
+    <input
+    type="number"
+    class="form-control mb-3"
+    id="editAmount">
+    
+    <select
+    class="form-select"
+    id="editStatus">
+    
+    <option>Completed</option>
+    <option>Pending</option>
+    
+    </select>
+    
+    </div>
+    
+    <div class="modal-footer">
+    
+    <button
+    class="btn btn-secondary"
+    data-bs-dismiss="modal">
+    
+    Cancel
+    
+    </button>
+    
+    <button
+    class="btn btn-success"
+    id="updateRevenue">
+    
+    Update
+    
+    </button>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!-- ================= DELETE MODAL ================= -->
+    
+    <div
+    class="modal fade"
+    id="deleteModal"
+    tabindex="-1">
+    
+    <div class="modal-dialog modal-sm">
+    
+    <div class="modal-content bg-dark text-light">
+    
+    <div class="modal-header">
+    
+    <h5>Delete Record</h5>
+    
+    <button
+    class="btn-close btn-close-white"
+    data-bs-dismiss="modal">
+    
+    </button>
+    
+    </div>
+    
+    <div class="modal-body">
+    
+    <p>
+    Are you sure you want to delete this revenue record?
+    </p>
+    
+    </div>
+    
+    <div class="modal-footer">
+    
+    <button
+    class="btn btn-secondary"
+    data-bs-dismiss="modal">
+    
+    Cancel
+    
+    </button>
+    
+    <button
+    class="btn btn-danger"
+    id="confirmDelete">
+    
+    Delete
+    
+    </button>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    <!-- Bootstrap -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Chart -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Revenue JS -->
+
+    <script src="revenue.js"></script>
+    
+    <script src="script.js"></script>
+
+   
+    
+    </body>
+    </html>
